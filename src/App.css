@@ -3,6 +3,13 @@
   --primary-color-soft: #ffadd6;
   --contrast-color: #282c34;
 }
+.cent-text{
+  text-align: center;
+}
+.link {
+  text-decoration: none !important;
+  color: var(--primary-color);
+}
 
 .App {
   text-align: center;

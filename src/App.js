@@ -168,7 +168,20 @@ class App extends React.Component {
 
           {this.renderGrid()}
           {!!this.state.total ? <div> Cantidad de pasos: {this.state.total} </div> : null}
-          <button name="dimension" className='btn-principal' value={this.state.gridDimension} onClick={()=>this.reset()}> Limpiar </button>
+          <button name="dimension" className='btn-principal' value={this.state.gridDimension} onClick={() => this.reset()}> Limpiar </button>
+
+          <p className='cent-text'> 
+            <p>
+              by Rodrigo Rubio Haro
+            </p>
+
+            <a className='link' target="_blank" href='https://github.com/RubioHaro/RatMaze/blob/main/src/AStar.js'>
+              Codigo Solver
+            </a>&nbsp; | &nbsp;
+            <a className='link' target="_blank" href='https://github.com/RubioHaro/RatMaze'>
+              Github
+            </a>
+          </p>
         </div>
       </div>
     );
