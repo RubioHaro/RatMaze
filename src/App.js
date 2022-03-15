@@ -175,10 +175,10 @@ class App extends React.Component {
               by Rodrigo Rubio Haro
             </p>
 
-            <a className='link' target="_blank" href='https://github.com/RubioHaro/RatMaze/blob/main/src/AStar.js'>
+            <a className='link' rel="noreferrer" target="_blank" href='https://github.com/RubioHaro/RatMaze/blob/main/src/AStar.js'>
               Codigo Solver
             </a>&nbsp; | &nbsp;
-            <a className='link' target="_blank" href='https://github.com/RubioHaro/RatMaze'>
+            <a className='link' rel="noreferrer" target="_blank" href='https://github.com/RubioHaro/RatMaze'>
               Github
             </a>
           </p>
