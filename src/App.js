@@ -29,7 +29,7 @@ class App extends React.Component {
   }
 
   setToggleCase = (e, stateKey, color) => {
-    let diff = stateKey == "start" ? 0 : 1
+    let diff = stateKey === "start" ? 0 : 1
     let squarePosition = e.currentTarget.id.split("-")
     Promise.resolve(this.cleanGrid(this.state[stateKey], { wall: false, difficulty: 1, color: 'transparent' }))
       .then(() => this.placeSquare(squarePosition, { wall: false, difficulty: diff, color: color }, stateKey))
@@ -103,7 +103,7 @@ class App extends React.Component {
 
   renderGrid = () => {
     let grid = this.state.grid
-    return <div>{grid.map((row, i) => <div style={{ display: 'flex' }}>{row.map((element, j) => <div data-difficulty={1} id={`${i}-${j}`} onClick={(e) => this.handleClick(e, this.state.clickMode, [i, j])} style={{ height: "100px", overflowX: 'hidden', width: '100px', borderStyle: 'solid', backgroundColor: element.color, fontSize: '50px', lineHeight: '100px', textAlign: 'center' }}>{element.difficulty == 0 ? '' : element.difficulty}</div>)}</div>)}</div>
+    return <div>{grid.map((row, i) => <div style={{ display: 'flex' }}>{row.map((element, j) => <div data-difficulty={1} id={`${i}-${j}`} onClick={(e) => this.handleClick(e, this.state.clickMode, [i, j])} style={{ height: "100px", overflowX: 'hidden', width: '100px', borderStyle: 'solid', backgroundColor: element.color, fontSize: '50px', lineHeight: '100px', textAlign: 'center' }}>{element.difficulty === 0 ? '' : element.difficulty}</div>)}</div>)}</div>
   }
 
   reset = async () => {
@@ -140,7 +140,7 @@ class App extends React.Component {
     let sum = 0
 
     optimalPath.forEach((node, i) => {
-      if (i == 0 || i == optimalPath.length - 1) { return }
+      if (i === 0 || i === optimalPath.length - 1) { return }
       sum += node.difficulty
       let difficulty = grid[node.row][node.col].difficulty
       grid[node.row][node.col] = { color: 'var(--primary-color-soft)', difficulty: difficulty, wall: false }

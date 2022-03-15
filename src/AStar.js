@@ -8,10 +8,10 @@ class AStar {
     this.nodes = []
     for (let i = 0; i < grid.length; i++)
       for (let j = 0; j < grid[0].length; j++) {
-        if (i == start[0] && j == start[1]) {
+        if (i === start[0] && j === start[1]) {
           this.start = new NodeElement(i, j, grid[i][j].difficulty, grid[i][j].wall, this)
           this.nodes.push(this.start)
-        } else if (i == end[0] && j == end[1]) {
+        } else if (i === end[0] && j === end[1]) {
           this.end = new NodeElement(i, j, grid[i][j].difficulty, grid[i][j].wall, this)
           this.nodes.push(this.end)
         } else
